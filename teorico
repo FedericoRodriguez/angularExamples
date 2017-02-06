@@ -97,6 +97,8 @@ app.controller("HomeController",["$scope","$http",function($scope,$http){
 	}
 }]);
 ///////////////////
-
-
+JSON SERVER
+--instalar a traves de npm: npm install -g json-server
+--crer un archivo .json con los datos.
+--Ejecutar sobre el archivo: json-server --watch db.json	
 ////////////////
