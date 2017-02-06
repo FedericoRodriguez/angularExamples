@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myapp"><!--1-->
+  <head>
+    <script src="libs/js/angular.min.js"></script>
+    <!--<script src="libs/js/angular-ui-router.js"></script>---><!--1 en 1 estuvo comentado-->
+    <script src="src/app.js"></script><!--1-->
+  </head>
+
+  <!-- <body ng-app="helloworld"> --><!--1-->
+  <body ng-controller="HomeController"><!--1-->
+   <!--  <ui-view></ui-view> --><!--1-->
+    <div>
+      <label>Nuevos Comentarios:</label>
+      <input type="text" ng-model="nuevoComentario.texto" placeholder="Su Comentario">
+      <input type="text" ng-model="nuevoComentario.autor" placeholder="Su Autor">
+      <hr>
+      <span><h1> {{"Hello   "+ nuevoComentario.autor}}!</h1><button ng-click="agregarComentario()">Agregar</button></span>
+      <ul>
+        <li ng-repeat="comentario in comentarios track by $index">
+            {{comentario.texto + " creado por : " + comentario.autor}} 
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
