@@ -102,3 +102,9 @@ JSON SERVER
 --crer un archivo .json con los datos.
 --Ejecutar sobre el archivo: json-server --watch db.json	
 ////////////////
+
+Route scope viene dado a travez de la herencia de prototype de JS
+route scope esta en todos los controladores 
+route scope es el padre de scope de controladores por ejemplo
+con el $parent puedo accesde desde el scope de un controlador al scope de su padre
+al actualizar el valor del padre se puede tambien actualizar el valor del hijo

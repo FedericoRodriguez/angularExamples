@@ -1,0 +1,12 @@
+<div ng-controller="PostsController">
+<hr>
+  <ul>
+    <li ng-repeat="post in posts">
+        {{post.titulo + " creado por : " + post.autor}} 
+    </li>
+    <label>Nuevos Post:</label>
+    <input type="text" ng-model="nuevoPost.titulo" placeholder="Titulo...">
+    <input type="text" ng-model="nuevoPost.autor" placeholder="Autor...">
+    <button ng-click="agregarPost()">Nuevo</button>
+  </ul>
+</div>
