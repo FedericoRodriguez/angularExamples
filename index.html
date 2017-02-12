@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html ng-app="myapp"><!--1-->
+
   <head>
     <script src="libs/js/angular.min.js"></script>
     <script src="libs/js/angular-route.js"></script><!--9-->
     <script src="libs/js/jquery-3.1.1.min.js"></script><!--9-->
     <script src="libs/js/jquery-ui.js"></script><!--9-->
+
     <!--<script src="libs/js/angular-ui-router.js"></script>---><!--1 en 1 estuvo comentado-->
     <script src="src/app.js"></script><!--1-->
     <script src="src/controllers/HomeController.js"></script><!--9-->
     <script src="src/controllers/PostsController.js"></script><!--9-->
+    <script src="src/controllers/ComentarioController.js"></script><!--9-->
+
+   <script src="src/directives/basics.js"></script><!--9-->
+
+    <base href="/">
   </head>
 
   <!-- <body ng-app="helloworld"> --><!--1-->
   <body><!--1-->
+     
    <!--  <ui-view></ui-view> --><!--1-->
     <div ng-view></div><!--9-->
   </body>

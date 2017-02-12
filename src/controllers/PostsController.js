@@ -14,6 +14,7 @@ app.controller("PostsController",["$scope","$http",function($scope,$http){
 		});
 	}
 	//tambien se puede usar $scope.$watchCollection para escuchar sobre la  coleccion posts y ejecutar una funcion.
-		
+	
+	
 
 }]);

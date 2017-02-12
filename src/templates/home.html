@@ -1,13 +1,11 @@
 <div ng-controller="HomeController"><!--9-->
-      <label>Nuevos Comentarios:</label>
-      <input type="text" ng-model="nuevoComentario.texto" placeholder="Su Comentario">
-      <input type="text" ng-model="nuevoComentario.autor" placeholder="Su Autor">
-      <hr>
-      <span><h1> {{"Hello   "+ nuevoComentario.autor}}!</h1><button ng-click="agregarComentario()">Agregar</button></span>
-      <ul>
-        <li ng-repeat="comentario in comentarios track by $index">
-            {{comentario.texto + " creado por : " + comentario.autor}} 
+      <label>{{title}}</label>
+       <ul>
+        <li>
+           <a href="/posts">Posts</a><!--9-->
         </li>
-      </ul>
-      <a href="#/posts">Posts</a><!--9-->
-</div>
+        <li>
+           <a href="/comentario">Comentarios</a><!--9-->
+        </li>
+      </ul>    
+</div>  

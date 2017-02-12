@@ -108,3 +108,8 @@ route scope esta en todos los controladores
 route scope es el padre de scope de controladores por ejemplo
 con el $parent puedo accesde desde el scope de un controlador al scope de su padre
 al actualizar el valor del padre se puede tambien actualizar el valor del hijo
+
+
+
+
+Necesitamos location para parsear la URL del navegador, para hacerla accesible a nuestra aplicacion
