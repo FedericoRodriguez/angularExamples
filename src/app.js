@@ -1,20 +1,21 @@
 var app = angular.module("myapp",["ngRoute"]);
 //Ruteo
 app.config(function($routeProvider, $locationProvider) {
-	var routeBase = "/src";
+   // $locationProvider.hashPrefix("!");
+   
     $routeProvider
     .when("/",{
-    	templateUrl:routeBase+"/templates/home.html",
+    	templateUrl:"src/templates/home.html",
     	controller: "HomeController"
     })
-    .when("/comentario",{
-    	templateUrl:routeBase+"/templates/comentario.html",
-    	controller: "ComentarioController"
+    .when("/memorias",{
+    	templateUrl:"src/templates/memorias.html",
+    	controller: "SoloenMemoriaController"
     })
     .when("/posts", {
-        templateUrl :routeBase+"/templates/posts.html",
+        templateUrl :"src/templates/posts.html",
         controller : "PostsController"
-    });
- $locationProvider.html5Mode(true); //activate HTML5 Mode
+    }).otherwise( { redirectTo: "/" });
+    //$locationProvider.html5Mode(true); //activate HTML5 Mode
   
 });

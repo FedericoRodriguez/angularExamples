@@ -111,5 +111,17 @@ al actualizar el valor del padre se puede tambien actualizar el valor del hijo
 
 
 
+RUTEO y REDIRECCION
 
-Necesitamos location para parsear la URL del navegador, para hacerla accesible a nuestra aplicacion
+Hashbang mode:
+por defecto. no tiene redireccion desde los links
+HTML5 mode:
+location para parsear la URL del navegador con HTML5 Mode , para hacerla accesible a nuestra aplicacion,(NECESITA PROGRMACION DEL LADO DEL SERVIDOR)
+
+								Hashbang mode									HTML5 mode
+
+configuration:					the default										{ html5Mode: true }
+URL format:						hashbang URLs in all browsers					regular URLs in modern browser, hashbang 																				 URLs in old browser
+<a href=""> link rewriting:			no											yes
+requires server-side configuration:	no											yes
+

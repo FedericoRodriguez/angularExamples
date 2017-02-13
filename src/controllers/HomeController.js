@@ -1,4 +1,4 @@
-app.controller("HomeController",["$scope",function($scope){
+app.controller("HomeController",["$scope","$location",function($scope,$location){
 
 	$scope.title = "Bienvenidos";
 	

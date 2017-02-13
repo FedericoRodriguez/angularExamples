@@ -1,0 +1,14 @@
+<div ng-controller="SoloenMemoriaController"><!--9-->
+      <label>Nuevos Comentarios</label>
+      <input type="text" ng-model="nuevaMemoria.texto" placeholder="Su Memoria...">
+      <input type="text" ng-model="nuevaMemoria.autor" placeholder="Su Autor...">
+      <hr>
+      <span>Hola la memoria es de</span><span> <b>{{nuevaMemoria.autor}}!</b></span><button ng-click="agregarMemoria()">Agregar</button></span>
+      <ul>
+        <li ng-repeat="memoria in memorias track by $index">
+            <span><label>{{memoria.texto}}</label>  creado por :  <label>{{memoria.autor}}</label><button ng-click="borrarMemoria(memoria)">Borrar</button></span>
+        </li>
+      </ul>
+     <hr>
+     <button back-button>Atras</button>
+</div>
