@@ -1,4 +1,4 @@
-app.controller("PostsController",["$scope","$http",function($scope,$http){
+/*app.controller("PostsController",["$scope","$http",function($scope,$http){
 	//post
 	$scope.posts = {};
 	$http.get("http://localhost:3000/posts").then(function(response) {
@@ -23,5 +23,53 @@ app.controller("PostsController",["$scope","$http",function($scope,$http){
 
 	}
 	//tambien se puede usar $scope.$watchCollection para escuchar sobre la  coleccion posts y ejecutar una funcion.
-	
+}]);	*/
+
+/*
+/////////////////////////////FACTORIES///////////////////////////////////////////////////////
+app.controller("PostsController",["$scope","PostService",function($scope,PostService){
+	//FACTORIES
+	PostService.traerPosts().then(function(data) { 
+		$scope.posts = data; 
+	});
+    $scope.nuevoPost={};
+
+
+	$scope.agregarPost = function(){
+		PostService.agregarPost($scope.nuevoPost).then(function(data) { 
+		 	$scope.posts.push(data);
+			$scope.nuevoPost={};
+	 	});
+	};
+	$scope.borrarPost = function(post) {
+		PostService.borrarPost(post).then(function(data) { 
+			PostService.traerPosts().then(function(data) { 
+			 	$scope.posts = data; 
+			 });
+		});
+	}
+}]);
+*/
+/////////////////////////SERVICES/////////////////////////////////////////////////////////////
+app.controller("PostsController",["$scope","PostService",function($scope,PostService){
+	//FACTORIES
+	PostService.traerPosts().then(function(data) { 
+		$scope.posts = data; 
+	});
+    $scope.nuevoPost={};
+
+
+	$scope.agregarPost = function(){
+		PostService.agregarPost($scope.nuevoPost).then(function(data) { 
+		 	$scope.posts.push(data);
+			$scope.nuevoPost={};
+	 	});
+	};
+	$scope.borrarPost = function(post) {
+		PostService.borrarPost(post).then(function(data) { 
+			PostService.traerPosts().then(function(data) { 
+			 	$scope.posts = data; 
+			 });
+		});
+	}
 }]);

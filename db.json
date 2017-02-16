@@ -1,48 +1,22 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "titulo": "Fede",
+      "autor": "fefefe",
+      "id": 1
     },
     {
-      "titulo": "de",
-      "id": 3
-    },
-    {
+      "titulo": "adf",
+      "autor": "asdas",
       "id": 4
     },
     {
-      "titulo": "asda",
-      "autor": "asd",
+      "titulo": "saas",
+      "autor": "asds",
       "id": 5
-    },
-    {
-      "titulo": "fede",
-      "id": 6
-    },
-    {
-      "autor": "asas",
-      "id": 7
-    },
-    {
-      "titulo": "efer",
-      "autor": "rgereg",
-      "id": 8
-    },
-    {
-      "titulo": "fadf",
-      "autor": "afa",
-      "id": 9
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

@@ -125,3 +125,6 @@ URL format:						hashbang URLs in all browsers					regular URLs in modern browse
 <a href=""> link rewriting:			no											yes
 requires server-side configuration:	no											yes
 
+////////////SERVICE VS FACTORY///////////////////////
+SERVICE deveulve un objeto 
+FACTORY devuelve  lo que retorna una funcion. Se usa para retornar algo mas especifico.
