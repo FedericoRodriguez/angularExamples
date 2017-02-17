@@ -1,11 +1,16 @@
 <div ng-controller="HomeController"><!--9-->
       <label>{{title}}</label>
        <ul>
-        <li>
-           <a href="#!posts">Posts</a><!--9-->
+        <li  ng-mouseover="bandera_hover = true" ng-mouseout="bandera_hover = false" ng-class="{'on_hover': bandera_hover}">
+           <a ng-style="myStyle" href="#!posts">Posts</a><!--9-->
         </li>
+        <li ng-mouseover="bandera_hover2 = true" ng-mouseout="bandera_hover2 = false" ng-class="{'on_hover': bandera_hover2}" >
+           <a ng-style="myStyle" href="#!memorias">Memoria</a><!--9-->
+        </li>
+        <hr>
         <li>
-           <a href="#!memorias">Memoria</a><!--9-->
+          <input type="button" value="Cambiar color" ng-click="myStyle={'color':'green'}">
+          <input type="button" value="Limpiar" ng-click="myStyle={}">
         </li>
       </ul>    
 </div>  

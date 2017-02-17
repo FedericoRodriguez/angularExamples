@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+a{
+	text-decoration :  none;
+}
+.on_hover{
+	background-color: red;
+}
+.no_hover{
+	background-color: blue; 
+}

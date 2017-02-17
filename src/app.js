@@ -1,4 +1,4 @@
-var app = angular.module("myapp",["ngRoute"]);
+var app = angular.module("myApp",["ngRoute"]);
 //Ruteo
 app.config(function($routeProvider, $locationProvider) {
    // $locationProvider.hashPrefix("!");
