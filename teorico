@@ -103,15 +103,32 @@ JSON SERVER
 --Ejecutar sobre el archivo: json-server --watch db.json	
 ////////////////
 
+///////////////////////MODULOS///////////////////////////
+Un modulo es una coleccion de servicios, directivas, controladores, filtros, y informacion de configuracion.
+angular.module es usado para configurar el $injector, que crea un objeto que sirve para  recuperar los servicios y para la inyeccion de dependencias.
+
+
+RUTEO y REDIRECCION
+
 Route scope viene dado a travez de la herencia de prototype de JS
 route scope esta en todos los controladores 
 route scope es el padre de scope de controladores por ejemplo
-con el $parent puedo accesde desde el scope de un controlador al scope de su padre
+con el $parent puedo acceder desde el scope de un controlador al scope de su padre
 al actualizar el valor del padre se puede tambien actualizar el valor del hijo
 
 
 
-RUTEO y REDIRECCION
+RUN
+Run blocks - get executed after the injector is created and are used to kickstart the application. Only instances and constants can be injected into run blocks. This is to prevent further system configuration during application run time.
+
+Run blocks are the closest thing in Angular to the main method. A run block is the code which needs to run to kickstart the application. It is executed after all of the service have been configured and the injector has been created. Run blocks typically contain code which is hard to unit-test, and for this reason should be declared in isolated modules, so that they can be ignored in the unit-tests.
+
+ORDEN DE EJECUCION
+app.config()
+app.run()
+directive's compile functions (if they are found in the dom)
+app.controller()
+directive's link functions (again, if found)
 
 Hashbang mode:
 por defecto. no tiene redireccion desde los links
@@ -128,3 +145,16 @@ requires server-side configuration:	no											yes
 ////////////SERVICE VS FACTORY///////////////////////
 SERVICE deveulve un objeto 
 FACTORY devuelve  lo que retorna una funcion. Se usa para retornar algo mas especifico.
+
+////////////////////////EVENTOS////////////////////
+El browser esta chequeando los eventos disparados por el usuario a travez de Event Loop
+cada vez que el navegador escucha una reaccion del usuario disapra el callback que registramos en el listener.
+Angualar Context es lo que controla el Event Loop en Angular. Es el que controla el evento.
+En Event loop no hace la actualizacion inmediata en Angular Context si debido a la relacion entre la vista y el controlador.
+El dom o el navegador actualiza la vista.
+Podesmos hacer eventos diferentes a traves del uso de apply.
+$apply se ejecuta cuando: * Disparamos Eventos con Angular por ejemplo ng-click,ng-....
+$apply llama a $digest
+watcher evalua si un valor se modifico o no.
+En angular se crea un watcher por cada atrributo que se crea en la vista o en UI.(Ej: variables)
+$diggest itera, recorre la lsita de watchers. Preguntando si su valor cambio. Si cambio actualiza la vista.
