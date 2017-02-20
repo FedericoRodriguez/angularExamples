@@ -1,9 +1,10 @@
-app.controller("HomeController",["$scope","$location",function($scope,$location){
+app.controller("HomeController",["$scope","$http","$location","HomeService",function($scope,$http,$location,HomeService){
 
 	$scope.title = "Bienvenidos";
 	$scope.bandera_hover = false;
 	$scope.bandera_hover2 = false;
 	$scope.myStyle = {};
+	$scope.repos={};
 
 	//apply
 	$('#cambiarTitulo').click(function(){
@@ -14,6 +15,10 @@ app.controller("HomeController",["$scope","$location",function($scope,$location)
 		});
 		//$scope.$digest();
 		//$scope.$apply();//aca afuera si hay errores angular no se entera porque esta operando fuera del scope.
+	});
+	//Obtener los datos de la fabrica utilizando PROMISES
+	HomeService.traerRepos().then(function(data) { 
+			$scope.repos = data;
 	});
 	
 }]);

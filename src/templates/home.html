@@ -15,4 +15,14 @@
       </ul>
       <button id="cambiarTitulo">Cambiar el Titulo</button> 
       <input type="button" value="Limpiar" ng-click="title = '';">   
+      <hr>
+      <label>Repositorios</label>
+      <ul>
+
+        <li ng-repeat="repo in repos" ng-cloak>
+          <div><img ng-src="{{repo.owner.avatar_url}}"></div>
+          <span><label><b>{{repo.name}}</b></label>  creado por :  <label><b>{{repo.full_name}}</b></label></span>
+          <hr>
+        </li>
+      </ul>
 </div>  

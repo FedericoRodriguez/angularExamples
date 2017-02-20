@@ -71,5 +71,6 @@ app.controller("PostsController",["$scope","PostService",function($scope,PostSer
 			 	$scope.posts = data; 
 			 });
 		});
+		
 	}
 }]);
